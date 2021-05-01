@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-echo -e "======Give name of your experiment as first argument, path of input files as second argument, path of ouput folder as third argument, number of threads as fourth argument ====== \nRun -> bash mafft.sh filename inpath outpath" 
+echo -e "======Give name of your experiment as first argument, path of input files as second argument, path of ouput folder as third argument, number of threads as fourth argument ====== \nRun -> bash mafft.sh experiment_name inpath outpath threads" 
 
 name=$1
 in_data=$2

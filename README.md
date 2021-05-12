@@ -22,5 +22,9 @@ It can 1) extract unaligned reads from bam files
     bash pl_NGS_process.sh [options] [arguments]
     
 
+Always modify your $PATH environment variable to include all the dependencies! 
+
+
+
 
 

@@ -19,7 +19,7 @@ It can 1) extract unaligned reads from bam files
        2) align reads using bowtie2 
        3) process post-alignment sam files and produce idx stats 
     
-    `bash pl_NGS_process.sh [options] [arguments]`
+    bash pl_NGS_process.sh [options] [arguments]
     
 
 

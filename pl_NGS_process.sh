@@ -1,7 +1,5 @@
 #!/usr/bash
 
-## $@ == all arguments
-
 ## below function extracts unmapped reads from bam files and calls bam2fastq function
 ext_unmapped(){
 	echo -e "\tExtracting unmapped reads...."
@@ -75,7 +73,7 @@ processing(){
 
 help(){
 	echo ""
-	echo -e "Usage: -i input_dir\n -f filetype\n  -d out_dir_path\n -l indexlocation\n  -t number_of_threads\n -e extractreads: 'y' if yes\n -a alignreads: 'y' if yes\n -p process_reads: 'y' if yes\n  -x index_file_name\n -r bowtie2_run_mode\n"
+	echo -e "Usage:\n -i input_dir\t -f filetype\t  -d out_dir_path\t -l indexlocation\t  -t number_of_threads\t -e extractreads\t -a alignreads\t -p process_reads\t  -x index_file_name\t -r bowtie2_run_mode\t"
 	echo -e "-i  Provide input directory path where sam and/or fastq files are located\n"
 	echo -e "-f  Present script processes only paired-end reads. Provide input file type; whether paired reads are intersperesed or provided as separate files\n"
 	echo -e "-d  Provide output directory path where aligned sam files will be stored\n"
@@ -127,7 +125,7 @@ out_new=$out/fastqout
 
 
 if [[ "$extractreads" == "y" ]] && [[ $input_dir ]]; then # ok
-	echo "\tInput directory is $input_dir"
+	echo -e "\tInput directory is $input_dir"
 	## start with extracting unalignmed reads from sam files
 	ext_unmapped 
 	## convert bam to fastq
@@ -139,7 +137,7 @@ fi
 
 
 if [[ "$alignreads" == "y" ]]; then
-	echo "\tRun mode is $run_mode\n index file is located at $indexlocation\n file format is $filetype"
+	echo -e "\tRun mode is $run_mode\n index file is located at $indexlocation\n file format is $filetype"
 	## align reads
 	align
 else
@@ -154,4 +152,4 @@ else
 	echo "Processing not required by user"
 fi
 
-echo "Your analysis is completed! Check you results. Not only computationally but also biologically..."
+echo "=======Your analysis is completed! Check you results. Both computationally and biologically!!======="

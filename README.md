@@ -20,6 +20,8 @@ It can 1) extract unaligned reads from bam files
        3) process post-alignment sam files and produce idx stats 
     
     bash pl_NGS_process.sh [options] [arguments]
+    Usage: -i input_dir   -f filetype    -d out_dir_path    -l indexlocation     -t number_of_threads   -x index_file_name    -r bowtie2_run_mode
+           -e extractreads   -a alignreads    -p process_reads   
     
 
 Always modify your $PATH environment variable to include all the dependencies! 

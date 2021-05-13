@@ -6,7 +6,7 @@ Scripts to make your bioinformatics analyses a bit easy ðŸ¤“ and reproducible ðŸ
 
 | Software | version tested |
 | -------- | -------------- |
-| [mafft]  |   v7.475       |
+| [mafft](https://mafft.cbrc.jp/alignment/software/source.html)  |   v7.475       |
 | [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) | v2.3.5.1    |
 
 

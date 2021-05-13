@@ -2,6 +2,14 @@
 
 Scripts to make your bioinformatics analyses a bit easy 🤓 and reproducible 🤓
 
+# Dependencies 
+
+| Software | version tested |
+| -------- | -------------- |
+| [mafft]  |   v7.475       |
+| -------- | -------------- |
+
+
 # bulk_mafft.sh
 Script to perform bulk multiple sequence analysis using mafft by using this one simple command. Dependency: [mafft](https://mafft.cbrc.jp/alignment/software/source.html)
                     

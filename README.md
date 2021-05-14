@@ -8,6 +8,8 @@ Scripts to make your bioinformatics analyses a bit easy ðŸ¤“ and reproducible ðŸ
 | -------- | -------------- |
 | [mafft](https://mafft.cbrc.jp/alignment/software/source.html)  |   v7.475       |
 | [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) | v2.3.5.1    |
+| [samtools](http://www.htslib.org) | v1.9 |
+| python | 3.7.6 |
 
 
 # bulk_mafft.sh
@@ -27,7 +29,7 @@ It can 1) extract unaligned reads from bam files
        2) align reads using bowtie2 
        3) process post-alignment sam files and produce idx stats 
     
-    bash pl_NGS_process.sh [options] [arguments]
+    bash pl_NGS_process.sh [options]
     
     # Usage: -i input_dir  -f filetype  -d out_dir_path  -l indexlocation -t number_of_threads  -x index_file_name  -r bowtie2_run_mode. -e extractreads -a alignreads -p process_reads
     

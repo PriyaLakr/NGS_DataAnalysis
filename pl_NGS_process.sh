@@ -61,7 +61,7 @@ processing(){
 
 	cd $pr_out
 
-	for j in *.bam; do samtools sort ${j} >  ${j}.out.sorted.bam; done 
+	for j in *.bam; do samtools sort ${j} > ${j}.out.sorted.bam; done  ## && ? these 3 for loops might throw some error when run in parallel as input in one is dependent on output from other: check this
 	
 	for sortedfile in *.out.sorted.bam; do samtools index ${sortedfile}.out.sorted.bam; done 
 

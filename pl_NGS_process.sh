@@ -1,4 +1,4 @@
-#!/usr/bash
+#!/bin/bash
 
 ## below function extracts unmapped reads from bam files and calls bam2fastq function
 ext_unmapped(){
@@ -28,7 +28,7 @@ align(){
 	cd $out_new
 
 	if [[ "$filetype" == "interleaved" ]]; then 
-		for j in *.fastq; do bowtie2 -x  $indexlocation/$index_file_name --interleaved ${j}  --$run_mode  --threads $number_of_threads  -S $out_dir_path/${j}_nhu_out.sam > ${j}_alnStat.txt; done; 
+		for j in *.$infilesuffix; do bowtie2 -x  $indexlocation/$index_file_name --interleaved ${j}  --$run_mode  --threads $number_of_threads  -S $out_dir_path/${j}_nhu_out.sam; done; 
 	fi
 
 	##if [[ "$filetype" == "separate" ]] && [[ -z $frwd_read_file ]] && [[ -z $rev_read_file ]]; then  
@@ -61,7 +61,9 @@ processing(){
 
 	cd $pr_out
 
-	for j in *.bam; do samtools sort ${j} >  ${j}.out.sorted.bam; samtools index ${j}.out.sorted.bam; done 
+	for j in *.bam; do samtools sort ${j} >  ${j}.out.sorted.bam; done 
+	
+	for sortedfile in *.out.sorted.bam; do samtools index ${sortedfile}.out.sorted.bam; done 
 
 	for z in *.out.sorted.bam; do samtools idxstats ${z} > $out_stats/${z}.idxstats.txt; done
 
@@ -84,6 +86,7 @@ help(){
 	echo -e "-a  Specify 'y' to run align function. It will align unmapped reads using bowtie2\n"
 	echo -e "-r  Provide run mode for bowtie2 alignment. Two options: local or  end-to-end \n"
 	echo -e "-p  Specify 'y' to run processing function. It will process the output files and return idx stats\n"
+	echo -e "-s  Provide suffix of input file, i.e, fastq or fq\n"
 	exit 1
 }
 
@@ -93,7 +96,7 @@ while getopts "i:f:d:t:e:a:l:p:r:x:" opt; do
 		i) input_dir="$OPTARG" ;; # ok
 		f) filetype="$OPTARG" ;; # unused as of now
 		d) out_dir_path="$OPTARG" ;; # ok
-		#o) output_dir_name="$OPTARG" ;; # ok
+		s) infilesuffix="$OPTARG" ;; # ok
 		t) number_of_threads="$OPTARG" ;; # ok
 		e) extractreads="$OPTARG" ;;
 		a) alignreads="$OPTARG" ;; # ok

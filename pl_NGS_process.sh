@@ -121,9 +121,8 @@ if [ -z "$extractreads" ] && [ -z "$alignreads" ] && [ -z "$process_reads" ]; th
 fi
 
 
-mkdir -p $input_dir/extract_out
+mkdir -p $input_dir/extract_out/fastqout 
 out=$input_dir/extract_out # ok
-mkdir -p $out/fastqout
 out_new=$out/fastqout
 
 

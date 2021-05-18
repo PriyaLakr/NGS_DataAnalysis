@@ -75,23 +75,23 @@ processing(){
 
 help(){
 	echo ""
-	echo -e "Usage:\n -i input_dir\t -f filetype\t  -d out_dir_path\t -l indexlocation\t  -t number_of_threads\t -e extractreads\t -a alignreads\t -p process_reads\t  -x index_file_name\t -r bowtie2_run_mode\t"
-	echo -e "-i  Provide input directory path where sam and/or fastq files are located\n"
-	echo -e "-f  Present script processes only paired-end reads. Provide input file type; whether paired reads are intersperesed or provided as separate files\n"
-	echo -e "-d  Provide output directory path where aligned sam files will be stored\n"
-	echo -e "-t  Provide number of threads\n"
-	echo -e "-l  Provide location of bowtie2 index\n"
-	echo -e "-x  Provide prefix of bowtie2 index file\n"
-	echo -e "-e  Specify 'y' to run extract reads function. It will extract unmapped reads from aligned bam files\n"
-	echo -e "-a  Specify 'y' to run align function. It will align unmapped reads using bowtie2\n"
-	echo -e "-r  Provide run mode for bowtie2 alignment. Two options: local or  end-to-end \n"
-	echo -e "-p  Specify 'y' to run processing function. It will process the output files and return idx stats\n"
-	echo -e "-s  Provide suffix of input file, i.e, fastq or fq\n"
+	echo -e "Usage:\n"
+	echo -e "-i (input_dir)          Provide input directory path where sam and/or fastq files are located\n"
+	echo -e "-f (filetype)           Present script processes only paired-end reads. Provide input file type; whether paired reads are intersperesed or provided as separate files\n"
+	echo -e "-d (out_dir_path)       Provide output directory path where aligned sam files will be stored\n"
+	echo -e "-t (number_of_threads)  Provide number of threads\n"
+	echo -e "-l (indexlocation)      Provide location of bowtie2 index\n"
+	echo -e "-x (index_file_name)    Provide prefix of bowtie2 index file\n"
+	echo -e "-e (extractreads)       Specify 'y' to run extract reads function. It will extract unmapped reads from aligned bam files\n"
+	echo -e "-a (alignreads)         Specify 'y' to run align function. It will align unmapped reads using bowtie2\n"
+	echo -e "-r (bowtie2_run_mode)   Provide run mode for bowtie2 alignment. Two options: local or  end-to-end \n"
+	echo -e "-p (process_reads)      Specify 'y' to run processing function. It will process the output files and return idx stats\n"
+	echo -e "-s (infile suffix)      Provide suffix of input file, i.e, fastq or fq\n"
 	exit 1
 }
 
 
-while getopts "i:f:d:t:e:a:l:p:r:x:" opt; do
+while getopts "i:f:d:t:e:a:l:p:r:x:s:" opt; do
 	case $opt in
 		i) input_dir="$OPTARG" ;; # ok
 		f) filetype="$OPTARG" ;; # unused as of now

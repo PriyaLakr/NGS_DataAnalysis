@@ -94,7 +94,7 @@ help(){
 while getopts "i:f:d:t:e:a:l:p:r:x:s:" opt; do
 	case $opt in
 		i) input_dir="$OPTARG" ;; # ok
-		f) filetype="$OPTARG" ;; # unused as of now
+		f) filetype="$OPTARG" ;; # ok
 		d) out_dir_path="$OPTARG" ;; # ok
 		s) infilesuffix="$OPTARG" ;; # ok
 		t) number_of_threads="$OPTARG" ;; # ok

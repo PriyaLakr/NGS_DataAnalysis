@@ -77,7 +77,7 @@ help(){
 	echo ""
 	echo -e "Usage:\n"
 	echo -e "-i (input_dir)          Provide input directory path where sam and/or fastq files are located\n"
-	echo -e "-f (filetype)           Present script processes only paired-end reads. Provide input file type; whether paired reads are intersperesed or provided as separate files\n"
+	echo -e "-f (filetype)           Present script processes only paired-end reads. Provide input file type; whether paired reads are interleaved or provided as separate files\n"
 	echo -e "-d (out_dir_path)       Provide output directory path where aligned sam files will be stored\n"
 	echo -e "-t (number_of_threads)  Provide number of threads\n"
 	echo -e "-l (indexlocation)      Provide location of bowtie2 index\n"

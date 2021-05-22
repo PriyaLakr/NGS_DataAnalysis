@@ -2,7 +2,7 @@
 
 Scripts to make your bioinformatics analyses a bit easy 🤓 and reproducible 🤓
 
-Best practices:     1. Keep your input files and scripts for one analysis in one folder \n
+Best practices:     1. Keep your input files and scripts for one analysis in one folder 
                     2. Always modify your $PATH environment variable to include all the dependencies required for the analysis
 
 # Dependencies 

@@ -2,6 +2,9 @@
 
 Scripts to make your bioinformatics analyses a bit easy 🤓 and reproducible 🤓
 
+Best practices:     Keep your input files and scripts for one analysis in one folder
+                    Always modify your $PATH environment variable to include all the dependencies required for the analysis
+
 # Dependencies 
 
 | Software | version tested |
@@ -35,7 +38,7 @@ It can 1) extract unaligned reads from bam files
     
     
 
-Always modify your $PATH environment variable to include all the dependencies! 
+
 
 
 

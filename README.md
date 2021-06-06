@@ -1,5 +1,7 @@
 # DataAnalysis
 
+Author: Priya Lakra
+
 Scripts to make your bioinformatics analyses a bit easy 🤓 and reproducible 🤓
 
 Best practices:     1. Keep your input files and scripts for one analysis in one folder 
